@@ -1,40 +1,29 @@
-# QA & Test Management Portfolio — GitHub Pages
+# Margret QA — Corporate Portfolio Website
 
-A responsive, multi-page HTML/CSS/JavaScript portfolio based on the supplied Test Manager CV.
+A responsive, multi-page static portfolio designed for GitHub Pages. Includes Home, Experience, Skills, Projects, Education, Contact, and three planned project detail pages. The phone number is not published.
 
-## Preview locally
+## Local preview
 
-Open `index.html` in your browser, or run `python -m http.server 8000` in this directory and visit http://localhost:8000.
+1. Extract the ZIP.
+2. Open `index.html` in Chrome or Edge. Navigation works locally.
+3. For live preview, open the folder in VS Code and use the Live Server extension.
+4. Test mobile layout with F12 → Toggle device toolbar.
 
-## Publish on GitHub Pages (free)
+## Update existing GitHub Pages repository
 
-1. Create a GitHub account at https://github.com/signup.
-2. Create a **public** repository named `YOURUSERNAME.github.io` (replace `YOURUSERNAME` with your exact GitHub username). If you prefer a different repository name, your site will use `https://YOURUSERNAME.github.io/REPOSITORY/` instead.
-3. Upload the contents of this ZIP to the **root** of your repository. Upload the `assets` and `projects` folders as folders. Do **not** upload the outer `qa-portfolio` folder itself.
-4. Go to **Settings → Pages → Build and deployment**, choose **Deploy from a branch**, branch **main**, folder **/(root)**, then **Save**.
-5. After deployment, visit `https://YOURUSERNAME.github.io/` (or the repository-specific URL). Allow a few minutes for publishing.
-6. Update any text in HTML files directly through GitHub's file editor and commit changes to republish.
+1. Open `https://github.com/Margret-QA/Margret-QA.github.io`.
+2. Upload **the contents** of this extracted folder, not the folder or ZIP itself. Preserve the `assets/` and `projects/` directories.
+3. Overwrite the old files and commit the changes. GitHub's browser upload may require uploading changed files in batches. Alternatively, use GitHub Desktop to replace the repository contents and push.
+4. In Settings → Pages, ensure Deploy from a branch → `main` → `/ (root)` is selected.
+5. Visit `https://margret-qa.github.io` and hard-refresh with Ctrl+F5 after deployment.
 
-## Site structure
+## Customize
 
-- `index.html`: Home, professional introduction, achievements
-- `experience.html`: Career timeline
-- `skills.html`: Technical expertise
-- `projects.html`: Portfolio projects overview
-- `projects/*.html`: Individual project plans
-- `education.html`: Education and training
-- `contact.html`: Professional contact
-- `assets/style.css`: Responsive light visual theme
-- `assets/script.js`: Mobile menu and dynamic footer year
+- Edit colors, typography and spacing in `assets/style.css`.
+- Edit page content in individual `.html` files.
+- Edit mobile menu in `assets/script.js`.
+- Projects are explicitly labelled as planned; replace with evidence and links only after completion.
+- Review the public email and LinkedIn details before publishing.
+- Google Fonts is used with local system font fallbacks.
 
-## Personalization
-
-- Update the display name and contact details in the generated HTML pages as needed.
-- The project pages are marked **Planned**. Replace with actual evidence only after completing each project.
-- No personal phone number, resume PDF, internal documents, or client-confidential materials are included.
-- To add a CV download, place a sanitized public PDF in `assets/` and link to it from the website.
-- A GitHub username is not required in the source code; GitHub Pages will use the account/repository name.
-
-## Security and privacy
-
-Review public contact details before publishing. Never commit secrets, private client data, internal systems screenshots, or proprietary code. The professional email address is sourced from the supplied CV; replace it if you prefer a dedicated public email.
+No build tools, API keys, or hosting fees are required.
