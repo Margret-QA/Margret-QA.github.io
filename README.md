@@ -19,9 +19,9 @@ A responsive, multi-page static portfolio designed for GitHub Pages. Includes Ho
 
 ## Customize
 
-- Edit colors, typography and spacing in `assets/style.css`.
+- Edit colors, typography and spacing in `style.css`.
 - Edit page content in individual `.html` files.
-- Edit mobile menu in `assets/script.js`.
+- Edit mobile menu in `script.js`.
 - Projects are explicitly labelled as planned; replace with evidence and links only after completion.
 - Review the public email and LinkedIn details before publishing.
 - Google Fonts is used with local system font fallbacks.
