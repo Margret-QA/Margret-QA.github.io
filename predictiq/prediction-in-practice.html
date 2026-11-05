@@ -1,4 +1,669 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Prediction in Practice — Before &amp; After | PredictIQ MBA</title><style>
-:root{--bg:#071426;--panel:#102842;--line:#294763;--text:#eaf4ff;--muted:#b7c8db;--teal:#4ae4d5}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:95px}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#1c4055,transparent 43%),var(--bg);color:var(--text);font-family:Inter,'Segoe UI',Arial,sans-serif}a{color:inherit}.wrap{max-width:1160px;width:calc(100% - 36px);margin:auto}.nav{position:sticky;top:0;z-index:10;background:#09192beb;backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}.nav .wrap{padding:17px 0;display:flex;justify-content:space-between;gap:15px;align-items:center}.brand{font-weight:850;font-size:21px;text-decoration:none}.brand span,.eyebrow,.accent{color:var(--teal)}.back{border:1px solid #397178;border-radius:9px;padding:10px 13px;font-size:13px;text-decoration:none}.hero{padding:70px 0 35px}.eyebrow{font-size:12px;font-weight:850;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:clamp(37px,5vw,63px);letter-spacing:-2px;line-height:1.1;margin:14px 0}.hero p{font-size:17px;line-height:1.8;color:var(--muted);max-width:890px}.chips{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0 35px}.chips a{padding:13px 17px;border:1px solid #366776;background:#113449;border-radius:11px;text-decoration:none;font-weight:750}.chips a:hover{border-color:var(--teal)}.case{scroll-margin-top:95px;background:linear-gradient(135deg,#132d49,#0c2037);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,4vw,40px);margin-bottom:30px}.case h2{font-size:clamp(27px,3.4vw,41px);margin:8px 0 14px;letter-spacing:-1px}.case .intro{font-size:16px;line-height:1.8;color:var(--muted)}.badge{display:inline-block;color:#81ebdf;border:1px solid #377c7c;background:#0d3c4b;border-radius:40px;padding:8px 12px;font-size:11px;font-weight:750}.beforeafter{display:grid;grid-template-columns:1fr 1fr;gap:17px;margin:25px 0}.tile,.panel{border:1px solid #2d506c;border-radius:14px;background:#0b223b;padding:23px}.tile.before{border-top:4px solid #ffb58a}.tile.after{border-top:4px solid #4ce4d5}.tile h3,.panel h3{font-size:19px;margin:0 0 12px}.tile p,.panel p,.tile li,.panel li{font-size:14px;color:#c1d2e4;line-height:1.75}.tile ul,.panel ul{padding-left:19px}.tile li,.panel li{margin:9px 0}.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:24px 0}.flow>div{border:1px solid #32667a;background:#0d3448;border-radius:11px;padding:17px}.flow b{color:#68e8da;font-size:12px}.flow strong{display:block;margin:10px 0;font-size:14px}.flow p{color:#bbd3df;font-size:12px;line-height:1.65;margin:0}.columns{display:grid;grid-template-columns:1fr 1fr;gap:17px}.data{overflow-x:auto;border:1px solid #2b5069;border-radius:12px;margin:16px 0}.data table{width:100%;border-collapse:collapse;min-width:570px}.data th,.data td{text-align:left;border-bottom:1px solid #2b4864;padding:13px;font-size:13px}.data th{color:#65e6d9;background:#17374d}.data td{color:#d4e4f1}.data tr:last-child td{border:0}.insight{border-left:4px solid var(--teal);background:#103d49;padding:18px 22px;border-radius:9px;margin:22px 0;color:#d6f2ee;line-height:1.7;font-size:14px}.insight strong{color:#9af8ec}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.metric{background:#0c3546;border:1px solid #337278;border-radius:13px;padding:20px}.metric strong{font-size:27px;color:#6aeadc;display:block}.metric span{display:block;font-size:12px;color:#c1d3e2;line-height:1.6;margin-top:7px}.foot{display:flex;justify-content:space-between;gap:12px;margin-top:25px}.foot a{color:#71ecde;text-decoration:none;font-weight:700}.sources{font-size:13px;color:#b3c8d9;line-height:1.8;padding:15px 0 70px}.sources a{color:#76e9de}.illustration{background:#0b1f37;border:1px solid #315671;border-radius:12px;padding:18px;margin:16px 0}.illustration svg{width:100%;height:auto;max-height:170px}.note{color:#a8c1d1;font-size:12px;line-height:1.7}@media(max-width:900px){.flow{grid-template-columns:repeat(3,1fr)}}@media(max-width:650px){.beforeafter,.columns,.metrics{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}.hero{padding-top:43px}}
-</style></head><body><header class="nav"><div class="wrap"><a class="brand" href="index.html#cases">PREDICT<span>IQ</span></a><a class="back" href="index.html#cases">← Back to Prediction in Practice</a></div></header><main class="wrap"><section class="hero"><div class="eyebrow">04 / Business case studies</div><h1>Prediction in <span class="accent">practice</span></h1><p>What changed when businesses moved from broad, reactive customer decisions toward data-driven personalization and forecasting? Explore the old approach, predictive workflow, customer experience, commercial benefits, and important limitations.</p><div class="chips"><a href="#netflix">Netflix — recommendations ↗</a><a href="#fashion">Fashion retail — preferences and stock ↗</a><a href="#comparison">Compare both cases ↗</a></div></section><section class="case" id="netflix"><div class="eyebrow">Case 01 / Streaming and personalization</div><h2>Netflix: from broad discovery to individualized recommendations</h2><span class="badge">Documented company system · Historical research evidence</span><p class="intro">The business problem is discovery: a large catalog is valuable only if customers can find something they want to watch. The 2015 Netflix research paper describes how personalization supports recommendations, search and the presentation of titles. The "before" panel is a simplified comparison with generic discovery methods, <strong>not</strong> a claim that Netflix used only those methods before a specific launch date.</p><div class="beforeafter"><div class="tile before"><h3>Before: broad or reactive discovery</h3><ul><li>Customers search by title or browse broad genres and popular-title lists.</li><li>The same highly popular titles can dominate what different viewers see.</li><li>A viewer may spend longer searching and may not discover relevant niche content.</li><li>Business decisions rely more on overall popularity and aggregate viewing patterns.</li></ul></div><div class="tile after"><h3>With predictive personalization</h3><ul><li>Rank titles and rows for each viewer using viewing and interaction signals.</li><li>Surface relevant genres, similar titles and contextual recommendations.</li><li>Adapt the interface as new interactions become available.</li><li>Test ranking and interface changes with online experiments rather than relying on intuition.</li></ul></div></div><h3>How prediction works, step by step</h3><div class="flow"><div><b>01</b><strong>Collect</strong><p>Viewing activity, interactions, searches and title metadata.</p></div><div><b>02</b><strong>Prepare</strong><p>Create user and title features; account for recency and preferences.</p></div><div><b>03</b><strong>Predict</strong><p>Estimate relevance and rank candidate titles using multiple algorithms.</p></div><div><b>04</b><strong>Present</strong><p>Show personalized rows, titles and discovery experiences.</p></div><div><b>05</b><strong>Evaluate</strong><p>A/B-test discovery, engagement and retention-related outcomes.</p></div></div><div class="columns"><div class="panel"><h3>One customer journey — illustrative</h3><ul><li>Viewer A watches several science-fiction series and frequently completes documentaries.</li><li>Generic experience: the viewer sees a broad popular-title list, including many unrelated programs.</li><li>Personalized experience: relevant science-fiction and documentary titles are ranked higher.</li><li>Viewer A starts a recommended title; the interaction becomes another signal for future recommendations.</li></ul></div><div class="panel"><h3>What changes for the customer and the business</h3><ul><li>Customer: less effort to discover relevant titles and more personalized browsing.</li><li>Business: better content discovery and opportunities to improve engagement and retention.</li><li>Product team: online experiments can evaluate changes instead of relying solely on opinions.</li><li>Caution: excessive personalization can reduce diversity and create feedback loops.</li></ul></div></div><div class="metrics"><div class="metric"><strong>~$1B/year</strong><span>Historical Netflix estimate of value from lower churn, as discussed in the 2015 research; not independently audited.</span></div><div class="metric"><strong>3–4×</strong><span>Reported historical take-rate comparison for personalized picks versus popularity lists in the paper.</span></div><div class="metric"><strong>A/B tests</strong><span>Experiments used to evaluate product and recommendation changes; results vary by test.</span></div></div><div class="insight"><strong>Important distinction:</strong> The published figures are historical company estimates and study observations, not a guarantee that recommendation systems deliver the same uplift today or in every industry.</div><div class="foot"><a href="index.html#cases">← Case study overview</a><a href="#fashion">Next: Fashion retail →</a></div></section><section class="case" id="fashion"><div class="eyebrow">Case 02 / Fashion retail and demand</div><h2>Fashion retail: from aggregate buying to preference-informed inventory</h2><span class="badge">Research-based proposed approach · Not verified retailer deployment</span><p class="intro">Your presentation discusses research using fitting-room preference information, clustering and decision trees to improve fashion product matching. The process below shows <strong>how such a retailer could operate</strong>, rather than claiming a specific company implemented it and achieved measured results.</p><div class="beforeafter"><div class="tile before"><h3>Before: conventional planning</h3><ul><li>Buyers estimate demand from last season's sales and staff experience.</li><li>Stock decisions emphasize aggregate category totals and past bestsellers.</li><li>Limited insight into why shoppers try products but do not buy.</li><li>Wrong sizes or styles can lead to stockouts, markdowns or excess inventory.</li></ul></div><div class="tile after"><h3>With predictive preference analysis</h3><ul><li>Combine permitted try-on preferences, sales, returns and product attributes.</li><li>Cluster customers by style, fit and purchasing behavior.</li><li>Use decision trees to identify patterns associated with purchase outcomes.</li><li>Forecast category and size-level demand to guide buying and replenishment.</li></ul></div></div><h3>How the retailer could make predictions</h3><div class="flow"><div><b>01</b><strong>Collect</strong><p>Record sales, returns, fit feedback and fitting-room preferences where permitted.</p></div><div><b>02</b><strong>Prepare</strong><p>Standardize sizes and styles; remove duplicates; handle missing data.</p></div><div><b>03</b><strong>Segment</strong><p>Use K-means to explore groups with similar preferences.</p></div><div><b>04</b><strong>Predict</strong><p>Use labeled models for purchase likelihood and time series for demand.</p></div><div><b>05</b><strong>Act &amp; learn</strong><p>Adjust recommendations and stock; measure returns, sales and stockouts.</p></div></div><div class="columns"><div class="panel"><h3>Illustrative shopper example</h3><ul><li>Customer B frequently tries neutral-colored running shoes in size 39 but buys only cushioned models.</li><li>The retailer sees repeated fit preferences, not merely a generic footwear interest.</li><li>An online or in-store recommendation prioritizes available cushioned shoes in the correct size.</li><li>Merchandising reviews whether demand for that style and size is underrepresented in past sales because of stockouts.</li></ul></div><div class="panel"><h3>How the approach could benefit operations</h3><ul><li>Customer: better size and style relevance, less time searching, fewer unsuitable suggestions.</li><li>Retailer: improved product matching and potential reduction in markdowns and returns.</li><li>Supply chain: better replenishment planning by category, store and size.</li><li>Caution: fitting-room data can be incomplete or sensitive in context; validate collection, consent where required and fairness.</li></ul></div></div><div class="panel"><h3>Illustrative footwear demand comparison</h3><p>This is the hypothetical numerical example already used in your MBA material. It illustrates a possible inventory benefit, not a measured result from the academic study.</p><div class="data"><table><thead><tr><th>Metric</th><th>Conventional order</th><th>Predictive-assisted plan</th></tr></thead><tbody><tr><td>Pairs ordered</td><td>1,000</td><td>850</td></tr><tr><td>Actual demand</td><td>880</td><td>880</td></tr><tr><td>Unsold units if no replenishment</td><td>120</td><td>0</td></tr><tr><td>Potential unmet demand</td><td>0</td><td>30</td></tr><tr><td>Operational trade-off</td><td>Higher excess stock</td><td>Lower excess stock, but stockout risk</td></tr></tbody></table></div><p class="note">The predictive-assisted order is closer to actual demand (absolute error 30 vs 120), but ordering 850 against demand of 880 creates a potential 30-unit shortage. A responsible decision also considers lost sales, safety stock, lead time, and replenishment speed.</p></div><div class="insight"><strong>Business lesson:</strong> Predictive accuracy is not identical to business success. The best inventory decision balances carrying costs, stockout costs, customer satisfaction and uncertainty.</div><div class="foot"><a href="#netflix">← Netflix</a><a href="#comparison">Compare both approaches →</a></div></section><section class="case" id="comparison"><div class="eyebrow">MBA synthesis</div><h2>How prediction changes customer strategy</h2><div class="data"><table><thead><tr><th>Dimension</th><th>Netflix</th><th>Fashion retail scenario</th></tr></thead><tbody><tr><td>Old decision</td><td>Broad discovery and popularity</td><td>Historical aggregate buying</td></tr><tr><td>New signal</td><td>Individual viewing and interaction behavior</td><td>Fit, style, sales, returns and preferences</td></tr><tr><td>Prediction</td><td>Which title is relevant to this viewer?</td><td>Which item suits this shopper? How much stock is needed?</td></tr><tr><td>Customer change</td><td>Personalized content discovery</td><td>More relevant product matching and availability</td></tr><tr><td>Business benefit to test</td><td>Engagement and retention</td><td>Conversion, returns and inventory efficiency</td></tr><tr><td>Evidence status</td><td>Documented historical company research</td><td>Research-inspired hypothetical implementation</td></tr></tbody></table></div><div class="insight"><strong>Conclusion:</strong> The shift is from reacting to what customers already did toward estimating what they may want next. A trustworthy system measures whether those predictions actually improve customer experience and incremental business value.</div><div class="foot"><a href="index.html#cases">← Back to Page 04</a><a href="index.html#runsmart">Explore RunSmart interactive case →</a></div></section></main></body></html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>Prediction in Practice — Before &amp; After | PredictIQ MBA</title>
+    <style>
+        :root {
+            --bg: #071426;
+            --panel: #102842;
+            --line: #294763;
+            --text: #eaf4ff;
+            --muted: #b7c8db;
+            --teal: #4ae4d5
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 95px
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(ellipse at 80% 0%, #1c4055, transparent 43%), var(--bg);
+            color: var(--text);
+            font-family: Inter, 'Segoe UI', Arial, sans-serif
+        }
+
+        a {
+            color: inherit
+        }
+
+        .wrap {
+            max-width: 1160px;
+            width: calc(100% - 36px);
+            margin: auto
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #09192beb;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .nav .wrap {
+            padding: 17px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            align-items: center
+        }
+
+        .brand {
+            font-weight: 850;
+            font-size: 21px;
+            text-decoration: none
+        }
+
+        .brand span,
+        .eyebrow,
+        .accent {
+            color: var(--teal)
+        }
+
+        .back {
+            border: 1px solid #397178;
+            border-radius: 9px;
+            padding: 10px 13px;
+            font-size: 13px;
+            text-decoration: none
+        }
+
+        .hero {
+            padding: 70px 0 35px
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: 2px;
+            text-transform: uppercase
+        }
+
+        .hero h1 {
+            font-size: clamp(37px, 5vw, 63px);
+            letter-spacing: -2px;
+            line-height: 1.1;
+            margin: 14px 0
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--muted);
+            max-width: 890px
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 25px 0 35px
+        }
+
+        .chips a {
+            padding: 13px 17px;
+            border: 1px solid #366776;
+            background: #113449;
+            border-radius: 11px;
+            text-decoration: none;
+            font-weight: 750
+        }
+
+        .chips a:hover {
+            border-color: var(--teal)
+        }
+
+        .case {
+            scroll-margin-top: 95px;
+            background: linear-gradient(135deg, #132d49, #0c2037);
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            padding: clamp(22px, 4vw, 40px);
+            margin-bottom: 30px
+        }
+
+        .case h2 {
+            font-size: clamp(27px, 3.4vw, 41px);
+            margin: 8px 0 14px;
+            letter-spacing: -1px
+        }
+
+        .case .intro {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--muted)
+        }
+
+        .badge {
+            display: inline-block;
+            color: #81ebdf;
+            border: 1px solid #377c7c;
+            background: #0d3c4b;
+            border-radius: 40px;
+            padding: 8px 12px;
+            font-size: 11px;
+            font-weight: 750
+        }
+
+        .beforeafter {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 17px;
+            margin: 25px 0
+        }
+
+        .tile,
+        .panel {
+            border: 1px solid #2d506c;
+            border-radius: 14px;
+            background: #0b223b;
+            padding: 23px
+        }
+
+        .tile.before {
+            border-top: 4px solid #ffb58a
+        }
+
+        .tile.after {
+            border-top: 4px solid #4ce4d5
+        }
+
+        .tile h3,
+        .panel h3 {
+            font-size: 19px;
+            margin: 0 0 12px
+        }
+
+        .tile p,
+        .panel p,
+        .tile li,
+        .panel li {
+            font-size: 14px;
+            color: #c1d2e4;
+            line-height: 1.75
+        }
+
+        .tile ul,
+        .panel ul {
+            padding-left: 19px
+        }
+
+        .tile li,
+        .panel li {
+            margin: 9px 0
+        }
+
+        .flow {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 24px 0
+        }
+
+        .flow>div {
+            border: 1px solid #32667a;
+            background: #0d3448;
+            border-radius: 11px;
+            padding: 17px
+        }
+
+        .flow b {
+            color: #68e8da;
+            font-size: 12px
+        }
+
+        .flow strong {
+            display: block;
+            margin: 10px 0;
+            font-size: 14px
+        }
+
+        .flow p {
+            color: #bbd3df;
+            font-size: 12px;
+            line-height: 1.65;
+            margin: 0
+        }
+
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 17px
+        }
+
+        .data {
+            overflow-x: auto;
+            border: 1px solid #2b5069;
+            border-radius: 12px;
+            margin: 16px 0
+        }
+
+        .data table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 570px
+        }
+
+        .data th,
+        .data td {
+            text-align: left;
+            border-bottom: 1px solid #2b4864;
+            padding: 13px;
+            font-size: 13px
+        }
+
+        .data th {
+            color: #65e6d9;
+            background: #17374d
+        }
+
+        .data td {
+            color: #d4e4f1
+        }
+
+        .data tr:last-child td {
+            border: 0
+        }
+
+        .insight {
+            border-left: 4px solid var(--teal);
+            background: #103d49;
+            padding: 18px 22px;
+            border-radius: 9px;
+            margin: 22px 0;
+            color: #d6f2ee;
+            line-height: 1.7;
+            font-size: 14px
+        }
+
+        .insight strong {
+            color: #9af8ec
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin: 22px 0
+        }
+
+        .metric {
+            background: #0c3546;
+            border: 1px solid #337278;
+            border-radius: 13px;
+            padding: 20px
+        }
+
+        .metric strong {
+            font-size: 27px;
+            color: #6aeadc;
+            display: block
+        }
+
+        .metric span {
+            display: block;
+            font-size: 12px;
+            color: #c1d3e2;
+            line-height: 1.6;
+            margin-top: 7px
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 25px
+        }
+
+        .foot a {
+            color: #71ecde;
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        .sources {
+            font-size: 13px;
+            color: #b3c8d9;
+            line-height: 1.8;
+            padding: 15px 0 70px
+        }
+
+        .sources a {
+            color: #76e9de
+        }
+
+        .illustration {
+            background: #0b1f37;
+            border: 1px solid #315671;
+            border-radius: 12px;
+            padding: 18px;
+            margin: 16px 0
+        }
+
+        .illustration svg {
+            width: 100%;
+            height: auto;
+            max-height: 170px
+        }
+
+        .note {
+            color: #a8c1d1;
+            font-size: 12px;
+            line-height: 1.7
+        }
+
+        @media(max-width:900px) {
+            .flow {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        @media(max-width:650px) {
+
+            .beforeafter,
+            .columns,
+            .metrics {
+                grid-template-columns: 1fr
+            }
+
+            .flow {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .hero {
+                padding-top: 43px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="nav">
+        <div class="wrap"><a class="brand" href="index.html#cases">PREDICT<span>IQ</span></a><a class="back"
+                href="index.html#cases">← Back to Prediction in Practice</a></div>
+    </header>
+    <main class="wrap">
+        <section class="hero">
+            <div class="eyebrow">04 / Business case studies</div>
+            <h1>Prediction in <span class="accent">practice</span></h1>
+            <p>What changed when businesses moved from broad, reactive customer decisions toward data-driven
+                personalization and forecasting? Explore the old approach, predictive workflow, customer experience,
+                commercial benefits, and important limitations.</p>
+            <div class="chips"><a href="#netflix">Netflix — recommendations ↗</a><a href="#fashion">Fashion retail —
+                    preferences and stock ↗</a><a href="#comparison">Compare both cases ↗</a></div>
+        </section>
+        <section class="case" id="netflix">
+            <div class="eyebrow">Case 01 / Streaming and personalization</div>
+            <h2>Netflix: from broad discovery to individualized recommendations</h2><span class="badge">Documented
+                company system · Historical research evidence</span>
+            <p class="intro">The business problem is discovery: a large catalog is valuable only if customers can find
+                something they want to watch. The 2015 Netflix research paper describes how personalization supports
+                recommendations, search and the presentation of titles. The "before" panel is a simplified comparison
+                with generic discovery methods, <strong>not</strong> a claim that Netflix used only those methods before
+                a specific launch date.</p>
+            <div class="beforeafter">
+                <div class="tile before">
+                    <h3>Before: broad or reactive discovery</h3>
+                    <ul>
+                        <li>Customers search by title or browse broad genres and popular-title lists.</li>
+                        <li>The same highly popular titles can dominate what different viewers see.</li>
+                        <li>A viewer may spend longer searching and may not discover relevant niche content.</li>
+                        <li>Business decisions rely more on overall popularity and aggregate viewing patterns.</li>
+                    </ul>
+                </div>
+                <div class="tile after">
+                    <h3>With predictive personalization</h3>
+                    <ul>
+                        <li>Rank titles and rows for each viewer using viewing and interaction signals.</li>
+                        <li>Surface relevant genres, similar titles and contextual recommendations.</li>
+                        <li>Adapt the interface as new interactions become available.</li>
+                        <li>Test ranking and interface changes with online experiments rather than relying on intuition.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <h3>How prediction works, step by step</h3>
+            <div class="flow">
+                <div><b>01</b><strong>Collect</strong>
+                    <p>Viewing activity, interactions, searches and title metadata.</p>
+                </div>
+                <div><b>02</b><strong>Prepare</strong>
+                    <p>Create user and title features; account for recency and preferences.</p>
+                </div>
+                <div><b>03</b><strong>Predict</strong>
+                    <p>Estimate relevance and rank candidate titles using multiple algorithms.</p>
+                </div>
+                <div><b>04</b><strong>Present</strong>
+                    <p>Show personalized rows, titles and discovery experiences.</p>
+                </div>
+                <div><b>05</b><strong>Evaluate</strong>
+                    <p>A/B-test discovery, engagement and retention-related outcomes.</p>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="panel">
+                    <h3>One customer journey — illustrative</h3>
+                    <ul>
+                        <li>Viewer A watches several science-fiction series and frequently completes documentaries.</li>
+                        <li>Generic experience: the viewer sees a broad popular-title list, including many unrelated
+                            programs.</li>
+                        <li>Personalized experience: relevant science-fiction and documentary titles are ranked higher.
+                        </li>
+                        <li>Viewer A starts a recommended title; the interaction becomes another signal for future
+                            recommendations.</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h3>What changes for the customer and the business</h3>
+                    <ul>
+                        <li>Customer: less effort to discover relevant titles and more personalized browsing.</li>
+                        <li>Business: better content discovery and opportunities to improve engagement and retention.
+                        </li>
+                        <li>Product team: online experiments can evaluate changes instead of relying solely on opinions.
+                        </li>
+                        <li>Caution: excessive personalization can reduce diversity and create feedback loops.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="metrics">
+                <div class="metric"><strong>~$1B/year</strong><span>Historical Netflix estimate of value from lower
+                        churn, as discussed in the 2015 research; not independently audited.</span></div>
+                <div class="metric"><strong>3–4×</strong><span>Reported historical take-rate comparison for personalized
+                        picks versus popularity lists in the paper.</span></div>
+                <div class="metric"><strong>A/B tests</strong><span>Experiments used to evaluate product and
+                        recommendation changes; results vary by test.</span></div>
+            </div>
+            <div class="insight"><strong>Important distinction:</strong> The published figures are historical company
+                estimates and study observations, not a guarantee that recommendation systems deliver the same uplift
+                today or in every industry.</div>
+            <div class="foot"><a href="index.html#cases">← Case study overview</a><a href="#fashion">Next: Fashion
+                    retail →</a></div>
+        </section>
+        <section class="case" id="fashion">
+            <div class="eyebrow">Case 02 / Fashion retail and demand</div>
+            <h2>Fashion retail: from aggregate buying to preference-informed inventory</h2><span
+                class="badge">Research-based proposed approach · Not verified retailer deployment</span>
+            <p class="intro">Your presentation discusses research using fitting-room preference information, clustering
+                and decision trees to improve fashion product matching. The process below shows <strong>how such a
+                    retailer could operate</strong>, rather than claiming a specific company implemented it and achieved
+                measured results.</p>
+            <div class="beforeafter">
+                <div class="tile before">
+                    <h3>Before: conventional planning</h3>
+                    <ul>
+                        <li>Buyers estimate demand from last season's sales and staff experience.</li>
+                        <li>Stock decisions emphasize aggregate category totals and past bestsellers.</li>
+                        <li>Limited insight into why shoppers try products but do not buy.</li>
+                        <li>Wrong sizes or styles can lead to stockouts, markdowns or excess inventory.</li>
+                    </ul>
+                </div>
+                <div class="tile after">
+                    <h3>With predictive preference analysis</h3>
+                    <ul>
+                        <li>Combine permitted try-on preferences, sales, returns and product attributes.</li>
+                        <li>Cluster customers by style, fit and purchasing behavior.</li>
+                        <li>Use decision trees to identify patterns associated with purchase outcomes.</li>
+                        <li>Forecast category and size-level demand to guide buying and replenishment.</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>How the retailer could make predictions</h3>
+            <div class="flow">
+                <div><b>01</b><strong>Collect</strong>
+                    <p>Record sales, returns, fit feedback and fitting-room preferences where permitted.</p>
+                </div>
+                <div><b>02</b><strong>Prepare</strong>
+                    <p>Standardize sizes and styles; remove duplicates; handle missing data.</p>
+                </div>
+                <div><b>03</b><strong>Segment</strong>
+                    <p>Use K-means to explore groups with similar preferences.</p>
+                </div>
+                <div><b>04</b><strong>Predict</strong>
+                    <p>Use labeled models for purchase likelihood and time series for demand.</p>
+                </div>
+                <div><b>05</b><strong>Act &amp; learn</strong>
+                    <p>Adjust recommendations and stock; measure returns, sales and stockouts.</p>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="panel">
+                    <h3>Illustrative shopper example</h3>
+                    <ul>
+                        <li>Customer B frequently tries neutral-colored running shoes in size 39 but buys only cushioned
+                            models.</li>
+                        <li>The retailer sees repeated fit preferences, not merely a generic footwear interest.</li>
+                        <li>An online or in-store recommendation prioritizes available cushioned shoes in the correct
+                            size.</li>
+                        <li>Merchandising reviews whether demand for that style and size is underrepresented in past
+                            sales because of stockouts.</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h3>How the approach could benefit operations</h3>
+                    <ul>
+                        <li>Customer: better size and style relevance, less time searching, fewer unsuitable
+                            suggestions.</li>
+                        <li>Retailer: improved product matching and potential reduction in markdowns and returns.</li>
+                        <li>Supply chain: better replenishment planning by category, store and size.</li>
+                        <li>Caution: fitting-room data can be incomplete or sensitive in context; validate collection,
+                            consent where required and fairness.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="panel">
+                <h3>Illustrative footwear demand comparison</h3>
+                <p>This is the hypothetical numerical example already used in your MBA material. It illustrates a
+                    possible inventory benefit, not a measured result from the academic study.</p>
+                <div class="data">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Conventional order</th>
+                                <th>Predictive-assisted plan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Pairs ordered</td>
+                                <td>1,000</td>
+                                <td>850</td>
+                            </tr>
+                            <tr>
+                                <td>Actual demand</td>
+                                <td>880</td>
+                                <td>880</td>
+                            </tr>
+                            <tr>
+                                <td>Unsold units if no replenishment</td>
+                                <td>120</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Potential unmet demand</td>
+                                <td>0</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>Operational trade-off</td>
+                                <td>Higher excess stock</td>
+                                <td>Lower excess stock, but stockout risk</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="note">The predictive-assisted order is closer to actual demand (absolute error 30 vs 120), but
+                    ordering 850 against demand of 880 creates a potential 30-unit shortage. A responsible decision also
+                    considers lost sales, safety stock, lead time, and replenishment speed.</p>
+            </div>
+            <div class="insight"><strong>Business lesson:</strong> Predictive accuracy is not identical to business
+                success. The best inventory decision balances carrying costs, stockout costs, customer satisfaction and
+                uncertainty.</div>
+            <div class="foot"><a href="#netflix">← Netflix</a><a href="#comparison">Compare both approaches →</a></div>
+        </section>
+        <section class="case" id="comparison">
+            <div class="eyebrow">MBA synthesis</div>
+            <h2>How prediction changes customer strategy</h2>
+            <div class="data">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dimension</th>
+                            <th>Netflix</th>
+                            <th>Fashion retail scenario</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Old decision</td>
+                            <td>Broad discovery and popularity</td>
+                            <td>Historical aggregate buying</td>
+                        </tr>
+                        <tr>
+                            <td>New signal</td>
+                            <td>Individual viewing and interaction behavior</td>
+                            <td>Fit, style, sales, returns and preferences</td>
+                        </tr>
+                        <tr>
+                            <td>Prediction</td>
+                            <td>Which title is relevant to this viewer?</td>
+                            <td>Which item suits this shopper? How much stock is needed?</td>
+                        </tr>
+                        <tr>
+                            <td>Customer change</td>
+                            <td>Personalized content discovery</td>
+                            <td>More relevant product matching and availability</td>
+                        </tr>
+                        <tr>
+                            <td>Business benefit to test</td>
+                            <td>Engagement and retention</td>
+                            <td>Conversion, returns and inventory efficiency</td>
+                        </tr>
+                        <tr>
+                            <td>Evidence status</td>
+                            <td>Documented historical company research</td>
+                            <td>Research-inspired hypothetical implementation</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="insight"><strong>Conclusion:</strong> The shift is from reacting to what customers already did
+                toward estimating what they may want next. A trustworthy system measures whether those predictions
+                actually improve customer experience and incremental business value.</div>
+            <div class="foot"><a href="index.html#cases">← Back to Page 04</a><a href="index.html#runsmart">Explore
+                    RunSmart interactive case →</a></div>
+        </section>
+    </main>
+</body>
+
+</html>
