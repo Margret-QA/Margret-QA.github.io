@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>Choose the Right ML Model — PredictIQ MBA</title>
+    <style>
+        :root {
+            color-scheme: dark;
+            --bg: #071528;
+            --panel: #102742;
+            --line: #2c4967;
+            --teal: #4ee4d5;
+            --text: #eef7ff;
+            --muted: #b6c9de
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px
+        }
+
+        body {
+            margin: 0;
+            background: radial-gradient(ellipse at 85% 0%, #16435a, transparent 45%), var(--bg);
+            font-family: Inter, 'Segoe UI', Arial, sans-serif;
+            color: var(--text)
+        }
+
+        .wrap {
+            width: min(1170px, calc(100% - 36px));
+            margin: auto
+        }
+
+        a {
+            color: inherit
+        }
+
+        .top {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: #07182be9;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--line)
+        }
+
+        .top .wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 17px 0
+        }
+
+        .logo {
+            text-decoration: none;
+            font-weight: 850;
+            font-size: 22px
+        }
+
+        .logo span,
+        .accent,
+        .eyebrow {
+            color: var(--teal)
+        }
+
+        .back {
+            border: 1px solid #3b6b76;
+            border-radius: 9px;
+            padding: 9px 14px;
+            text-decoration: none;
+            font-size: 13px
+        }
+
+        .back:hover {
+            background: #173d4b
+        }
+
+        .hero {
+            padding: 75px 0 40px
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            font-weight: 850;
+            font-size: 12px;
+            letter-spacing: 2px
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1.1;
+            letter-spacing: -2px;
+            margin: 14px 0
+        }
+
+        .hero p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--muted);
+            max-width: 880px
+        }
+
+        .navcards {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin: 25px 0 42px
+        }
+
+        .navcards a {
+            border: 1px solid var(--line);
+            background: #102a45;
+            border-radius: 13px;
+            padding: 17px 13px;
+            text-decoration: none;
+            transition: .2s
+        }
+
+        .navcards a:hover,
+        .navcards a:focus-visible {
+            transform: translateY(-4px);
+            border-color: var(--teal)
+        }
+
+        .navcards b {
+            color: var(--teal);
+            font-size: 11px
+        }
+
+        .navcards span {
+            display: block;
+            font-weight: 800;
+            margin-top: 8px;
+            font-size: 14px
+        }
+
+        .model {
+            scroll-margin-top: 90px;
+            border: 1px solid var(--line);
+            border-radius: 22px;
+            background: linear-gradient(140deg, #142e4c, #0d2039);
+            padding: clamp(22px, 4vw, 40px);
+            margin-bottom: 28px;
+            box-shadow: 0 20px 60px #0002
+        }
+
+        .model-head {
+            display: flex;
+            align-items: center;
+            gap: 18px
+        }
+
+        .num {
+            font-size: 26px;
+            color: #8ff8e9;
+            background: #10444f;
+            border: 1px solid #307783;
+            padding: 17px;
+            border-radius: 14px;
+            font-weight: 850
+        }
+
+        .model h2 {
+            font-size: clamp(25px, 3vw, 36px);
+            letter-spacing: -1px;
+            margin: 5px 0
+        }
+
+        .model .question {
+            font-size: 18px;
+            color: #d1e8f4;
+            margin: 24px 0
+        }
+
+        .type {
+            font-size: 12px;
+            color: #8befe1;
+            border: 1px solid #3b737b;
+            border-radius: 30px;
+            padding: 7px 12px
+        }
+
+        .cols {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 18px
+        }
+
+        .panel {
+            border: 1px solid #294c69;
+            border-radius: 14px;
+            background: #0b2038;
+            padding: 23px;
+            margin-bottom: 18px
+        }
+
+        .panel h3 {
+            margin: 0 0 12px;
+            color: #f3fbff;
+            font-size: 19px
+        }
+
+        .panel p,
+        .panel li {
+            color: #c0d1e4;
+            font-size: 14px;
+            line-height: 1.75
+        }
+
+        .panel ul {
+            margin: 8px 0;
+            padding-left: 21px
+        }
+
+        .panel li {
+            margin: 8px 0
+        }
+
+        .label {
+            font-size: 11px;
+            color: #63e4d6;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1.3px
+        }
+
+        .case {
+            border-left: 3px solid #51e1d4;
+            padding: 17px 20px;
+            background: #0c3744;
+            border-radius: 9px;
+            margin: 18px 0
+        }
+
+        .case p {
+            color: #d2e8e9;
+            margin: 9px 0
+        }
+
+        .twocol {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px
+        }
+
+        .good {
+            border-color: #2b716d
+        }
+
+        .bad {
+            border-color: #77544d
+        }
+
+        .good h3 {
+            color: #70e7d6
+        }
+
+        .bad h3 {
+            color: #ffbb93
+        }
+
+        .diagram {
+            width: 100%;
+            height: 210px;
+            border: 1px solid #315675;
+            border-radius: 13px;
+            background: #091d34;
+            display: block;
+            margin: 15px 0
+        }
+
+        .diagram text {
+            fill: #c7e5ed;
+            font-size: 13px
+        }
+
+        .takeaway {
+            padding: 18px;
+            border: 1px solid #367b7d;
+            border-radius: 12px;
+            background: #103d47;
+            line-height: 1.7;
+            color: #dff6f1
+        }
+
+        .footlinks {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 22px;
+            gap: 12px
+        }
+
+        .footlinks a {
+            color: #67e8dc;
+            text-decoration: none;
+            font-weight: 750
+        }
+
+        .summary {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: #112943;
+            padding: 24px;
+            margin-bottom: 45px
+        }
+
+        .summary table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 650px
+        }
+
+        .summary th,
+        .summary td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #304d67;
+            font-size: 13px
+        }
+
+        .summary th {
+            color: #75e9dc
+        }
+
+        .summary td {
+            color: #d4e1ee
+        }
+
+        .tablewrap {
+            overflow-x: auto
+        }
+
+        .footer {
+            padding: 35px 0 70px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.8
+        }
+
+        .sources a {
+            color: #7dece0
+        }
+
+        @media(max-width:860px) {
+            .navcards {
+                grid-template-columns: repeat(3, 1fr)
+            }
+
+            .cols {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media(max-width:560px) {
+            .navcards {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .twocol {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding-top: 45px
+            }
+
+            .model-head {
+                align-items: flex-start
+            }
+
+            .footlinks {
+                flex-direction: column
+            }
+        }
+
+        /* Interactive model explorer dashboards */
+        .model-dashboard {
+            margin: 24px 0 18px;
+            padding: 24px;
+            border: 1px solid #377b87;
+            border-radius: 17px;
+            background: linear-gradient(130deg, #092a3d, #102c47)
+        }
+
+        .model-dashboard h3 {
+            margin: 0 0 8px;
+            color: #a4fff0;
+            font-size: 22px
+        }
+
+        .model-dashboard .dashboard-help {
+            color: #b7d3e0;
+            line-height: 1.6;
+            font-size: 14px
+        }
+
+        .dashboard-layout {
+            display: grid;
+            grid-template-columns: minmax(220px, 1fr) minmax(260px, 1.25fr);
+            gap: 24px;
+            margin-top: 20px
+        }
+
+        .dashboard-controls {
+            display: grid;
+            gap: 17px
+        }
+
+        .dashboard-controls label {
+            display: block;
+            color: #d9eef5;
+            font-size: 13px;
+            font-weight: 650
+        }
+
+        .dashboard-controls output {
+            float: right;
+            color: #76ebdc
+        }
+
+        .dashboard-controls input {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            accent-color: #4ee4d5
+        }
+
+        .dashboard-results {
+            padding: 18px;
+            border: 1px solid #335d70;
+            border-radius: 12px;
+            background: #081d32
+        }
+
+        .dashboard-value {
+            font-size: 35px;
+            font-weight: 850;
+            color: #65e9db;
+            margin: 5px 0 13px
+        }
+
+        .dashboard-bars {
+            display: grid;
+            gap: 10px
+        }
+
+        .dashboard-bar {
+            display: grid;
+            grid-template-columns: 115px 1fr 52px;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #cce4ed
+        }
+
+        .dashboard-track {
+            height: 13px;
+            background: #294258;
+            border-radius: 20px;
+            overflow: hidden
+        }
+
+        .dashboard-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3d82c3, #4ee4d5);
+            border-radius: 20px
+        }
+
+        .dashboard-explain {
+            font-size: 13px;
+            line-height: 1.65;
+            color: #b8d5e3;
+            margin: 16px 0 0
+        }
+
+        .dashboard-note {
+            color: #95b5c5;
+            font-size: 12px;
+            margin-top: 15px
+        }
+
+        @media(max-width:720px) {
+            .dashboard-layout {
+                grid-template-columns: 1fr
+            }
+
+            .dashboard-bar {
+                grid-template-columns: 95px 1fr 44px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <div class="wrap"><a class="logo" href="index.html#models">PREDICT<span>IQ</span></a><a class="back"
+                href="index.html#models">← Back to Page 03</a></div>
+    </header>
+    <main class="wrap">
+        <section class="hero">
+            <div class="eyebrow">03 / Machine learning · Interactive model explorer</div>
+            <h1>Choose the <span class="accent">right model</span></h1>
+            <p>Five approaches from your MBA presentation, expanded with when to use them, how they work, industry
+                examples, strengths, limitations, and the same RunSmart customer journey. Click a model below to jump to
+                its full guide.</p>
+            <p class="type">Company references are differentiated from hypothetical RunSmart examples and general
+                industry applications.</p>
+        </section>
+        <nav aria-label="Model explorer" class="navcards"><a href="#logistic"><b>MODEL 01</b><span>Logistic Regression
+                    ↗</span></a><a href="#trees"><b>MODEL 02</b><span>Decision Trees &amp; XGBoost ↗</span></a><a
+                href="#kmeans"><b>MODEL 03</b><span>K-means Clustering ↗</span></a><a href="#collaborative"><b>MODEL
+                    04</b><span>Collaborative Filtering ↗</span></a><a href="#timeseries"><b>MODEL
+                    05</b><span>Time-Series Forecasting ↗</span></a></nav>
+        <section class="model" id="logistic">
+            <div class="model-head">
+                <div class="num">01</div>
+                <div>
+                    <div class="eyebrow">Supervised classification</div>
+                    <h2>Logistic Regression</h2>
+                </div>
+            </div>
+            <p class="question">Business question: <strong>Will this customer buy running shoes within 7 days?</strong>
+            </p>
+            <div class="cols">
+                <div>
+                    <div class="panel">
+                        <h3>Where this model fits best</h3>
+                        <p>Use when the target is a binary event (buy / not buy, churn / stay, respond / ignore) and the
+                            team values a fast, explainable baseline and interpretable coefficients.</p>
+                        <h3>How it works</h3>
+                        <p>The model combines feature values with learned coefficients, applies a logistic function and
+                            outputs a score between 0 and 1. Calibration must be checked before treating the score as a
+                            probability.</p><svg aria-label="Illustrative logistic S curve" class="diagram" role="img"
+                            viewbox="0 0 520 210">
+                            <path d="M40 20V174H485" fill="none" stroke="#54708a" stroke-width="2"></path>
+                            <path d="M48 167 C180 167 190 160 240 104 S310 40 475 35" fill="none" stroke="#4ee4d5"
+                                stroke-width="4"></path>
+                            <path d="M40 104H485" stroke="#4a6078" stroke-dasharray="5 5"></path><text x="15"
+                                y="38">1</text><text x="10" y="108">0.5</text><text x="20" y="176">0</text><text x="200"
+                                y="196">Combined customer signal →</text>
+                        </svg>
+                    </div>
+                    <div class="panel">
+                        <h3>Inputs and outputs</h3>
+                        <div class="label">Inputs</div>
+                        <p>Purchase outcomes labeled 0/1; historical customer features; time-stamped observation
+                            records.</p>
+                        <div class="label">Output</div>
+                        <p>Example: customer RS-1042 receives an illustrative 0.72 purchase score, which requires
+                            calibration before interpreting as a 72% probability.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="panel">
+                        <h3>One continuous example: RunSmart</h3>
+                        <p>RunSmart: previous orders, cart status, product views and recency are used to score seven-day
+                            purchase propensity. The marketing team can rank eligible customers for a controlled test.
+                        </p>
+                        <div class="case">
+                            <div class="label">Real-world / research example</div>
+                            <p>Real-world industry example: credit-risk and response propensity scoring have long used
+                                logistic regression. FICO is a documented commercial scoring pioneer, but this page does
+                                not claim FICO's current proprietary score uses this exact algorithm.</p>
+                        </div>
+                    </div>
+                    <div class="twocol">
+                        <div class="panel good">
+                            <h3>✓ Advantages</h3>
+                            <ul>
+                                <li>Fast to train, cheap to run and straightforward to explain</li>
+                                <li>Strong baseline for binary classification</li>
+                                <li>Coefficients and odds ratios support model review</li>
+                            </ul>
+                        </div>
+                        <div class="panel bad">
+                            <h3>! Limitations</h3>
+                            <ul>
+                                <li>Linear relationship in log-odds may miss complex interactions</li>
+                                <li>Sensitive to leakage, multicollinearity and badly engineered features</li>
+                                <li>Predicted scores can be poorly calibrated on changing populations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <h3>How to evaluate it</h3>
+                        <p>Evaluate on time-separated test data using precision, recall, ROC-AUC, log loss and
+                            calibration; compare with a simple baseline.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="model-dashboard" data-model="logistic">
+                <h3>Purchase probability simulator</h3>
+                <p class="dashboard-help">Change customer activity to see how an illustrative logistic score responds.
+                </p>
+                <div class="dashboard-layout">
+                    <div class="dashboard-controls"><label>Running-shoe visits <output
+                                data-output="visits">8</output><input aria-label="Running-shoe visits"
+                                data-input="visits" max="20" min="0" step="1" type="range"
+                                value="8" /></label><label>Previous purchases <output
+                                data-output="orders">5</output><input aria-label="Previous purchases"
+                                data-input="orders" max="15" min="0" step="1" type="range"
+                                value="5" /></label><label>Cart interactions <output data-output="cart">1</output><input
+                                aria-label="Cart interactions" data-input="cart" max="5" min="0" step="1" type="range"
+                                value="1" /></label></div>
+                    <div class="dashboard-results">
+                        <div aria-live="polite" class="dashboard-value"></div>
+                        <div class="dashboard-bars"></div>
+                        <p class="dashboard-explain"></p>
+                    </div>
+                </div>
+                <p class="dashboard-note">Synthetic educational demonstration — not a trained model or verified customer
+                    prediction.</p>
+            </div>
+            <div class="footlinks"></div>
+        </section>
+        <section class="model" id="trees">
+            <div class="model-head">
+                <div class="num">02</div>
+                <div>
+                    <div class="eyebrow">Supervised classification / regression</div>
+                    <h2>Decision Trees &amp; XGBoost</h2>
+                </div>
+            </div>
+            <p class="question">Business question: <strong>Which combinations of signals best explain purchase
+                    propensity?</strong></p>
+            <div class="cols">
+                <div>
+                    <div class="panel">
+                        <h3>Where this model fits best</h3>
+                        <p>Use when customer signals interact in nonlinear ways: cart abandonment may mean something
+                            different for repeat buyers than for first-time visitors. Single trees are explainable;
+                            boosted trees often perform well on structured tabular data.</p>
+                        <h3>How it works</h3>
+                        <p>A decision tree splits records by feature thresholds. XGBoost combines many shallow trees
+                            sequentially, each correcting errors from the earlier ensemble. Inspect feature importance
+                            carefully; it is not proof of causation.</p><svg
+                            aria-label="Decision tree showing cart and recency splits" class="diagram" role="img"
+                            viewbox="0 0 520 210">
+                            <path d="M260 53L145 104M260 53L375 104M145 125L80 173M145 125L210 173" stroke="#4ee4d5"
+                                stroke-width="2"></path>
+                            <g fill="#16445a" stroke="#4ee4d5">
+                                <rect height="36" rx="8" width="124" x="198" y="18"></rect>
+                                <rect height="35" rx="8" width="130" x="80" y="104"></rect>
+                                <rect height="35" rx="8" width="135" x="308" y="104"></rect>
+                                <rect height="30" rx="8" width="115" x="20" y="172"></rect>
+                                <rect height="30" rx="8" width="115" x="160" y="172"></rect>
+                            </g><text x="220" y="41">Cart active?</text><text x="95" y="126">Recent buyer?</text><text
+                                x="323" y="126">Lower intent</text><text x="34" y="192">High intent</text><text x="173"
+                                y="192">Moderate</text>
+                        </svg>
+                    </div>
+                    <div class="panel">
+                        <h3>Inputs and outputs</h3>
+                        <div class="label">Inputs</div>
+                        <p>Structured customer features and historical outcomes; train/validation/test split by time.
+                        </p>
+                        <div class="label">Output</div>
+                        <p>Example: customer RS-1042 falls into a high-intent branch. An ensemble outputs a score that
+                            must be evaluated and calibrated.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="panel">
+                        <h3>One continuous example: RunSmart</h3>
+                        <p>RunSmart: a tree can split first on cart status, then recency, then discount history. XGBoost
+                            may learn interactions among views, order frequency, coupon usage and device.</p>
+                        <div class="case">
+                            <div class="label">Real-world / research example</div>
+                            <p>Real-world documented example: XGBoost has been widely adopted in data-science
+                                competitions and production tabular-data tasks. The source presentation does not
+                                identify a verified named retailer deploying XGBoost for customer preference prediction,
+                                so RunSmart is a clearly labeled hypothetical application.</p>
+                        </div>
+                    </div>
+                    <div class="twocol">
+                        <div class="panel good">
+                            <h3>✓ Advantages</h3>
+                            <ul>
+                                <li>Captures nonlinear patterns and feature interactions</li>
+                                <li>Often strong on tabular data with mixed signal types</li>
+                                <li>Single trees can be visualized as understandable decision rules</li>
+                            </ul>
+                        </div>
+                        <div class="panel bad">
+                            <h3>! Limitations</h3>
+                            <ul>
+                                <li>Boosted ensembles are harder to explain than a single tree</li>
+                                <li>Can overfit or exploit leaked features if validation is weak</li>
+                                <li>Feature importance can be misleading, especially with correlated inputs</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <h3>How to evaluate it</h3>
+                        <p>Evaluate on time-separated test data using precision, recall, ROC-AUC, log loss and
+                            calibration; compare with a simple baseline.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="model-dashboard" data-model="trees">
+                <h3>Decision-rule explorer</h3>
+                <p class="dashboard-help">Adjust the signals to follow a simplified decision-tree path.</p>
+                <div class="dashboard-layout">
+                    <div class="dashboard-controls"><label>Product views <output data-output="visits">8</output><input
+                                aria-label="Product views" data-input="visits" max="20" min="0" step="1" type="range"
+                                value="8" /></label><label>Days since last order <output
+                                data-output="recency">35</output><input aria-label="Days since last order"
+                                data-input="recency" max="180" min="0" step="1" type="range"
+                                value="35" /></label><label>Cart value (€) <output data-output="cart">80</output><input
+                                aria-label="Cart value (€)" data-input="cart" max="250" min="0" step="1" type="range"
+                                value="80" /></label></div>
+                    <div class="dashboard-results">
+                        <div aria-live="polite" class="dashboard-value"></div>
+                        <div class="dashboard-bars"></div>
+                        <p class="dashboard-explain"></p>
+                    </div>
+                </div>
+                <p class="dashboard-note">Synthetic educational demonstration — not a trained model or verified customer
+                    prediction.</p>
+            </div>
+            <div class="footlinks"></div>
+        </section>
+        <section class="model" id="kmeans">
+            <div class="model-head">
+                <div class="num">03</div>
+                <div>
+                    <div class="eyebrow">Unsupervised segmentation</div>
+                    <h2>K-means Clustering</h2>
+                </div>
+            </div>
+            <p class="question">Business question: <strong>Which customers have similar shopping behavior?</strong></p>
+            <div class="cols">
+                <div>
+                    <div class="panel">
+                        <h3>Where this model fits best</h3>
+                        <p>Use to explore behavioral segments when no class labels are available: loyal runners, bargain
+                            seekers, casual browsers and high-value shoppers.</p>
+                        <h3>How it works</h3>
+                        <p>Choose K clusters, standardize numeric features, then assign each customer to the nearest
+                            centroid. Repeat until the cluster assignments stabilize. Interpret the clusters after
+                            training; their labels are assigned by analysts, not discovered as ground truth.</p><svg
+                            aria-label="Three illustrative customer clusters" class="diagram" role="img"
+                            viewbox="0 0 520 210">
+                            <circle cx="90" cy="50" fill="#4ee4d5" r="7"></circle>
+                            <circle cx="115" cy="65" fill="#4ee4d5" r="7"></circle>
+                            <circle cx="130" cy="45" fill="#4ee4d5" r="7"></circle>
+                            <circle cx="100" cy="90" fill="#4ee4d5" r="7"></circle>
+                            <circle cx="150" cy="84" fill="#4ee4d5" r="7"></circle>
+                            <circle cx="295" cy="54" fill="#f8b477" r="7"></circle>
+                            <circle cx="325" cy="78" fill="#f8b477" r="7"></circle>
+                            <circle cx="345" cy="45" fill="#f8b477" r="7"></circle>
+                            <circle cx="290" cy="102" fill="#f8b477" r="7"></circle>
+                            <circle cx="355" cy="90" fill="#f8b477" r="7"></circle>
+                            <circle cx="230" cy="153" fill="#8da8ff" r="7"></circle>
+                            <circle cx="255" cy="173" fill="#8da8ff" r="7"></circle>
+                            <circle cx="198" cy="170" fill="#8da8ff" r="7"></circle>
+                            <circle cx="225" cy="186" fill="#8da8ff" r="7"></circle><text x="55" y="130">Loyal
+                                runners</text><text x="285" y="130">Bargain seekers</text><text x="195" y="205">Casual
+                                browsers</text>
+                        </svg>
+                    </div>
+                    <div class="panel">
+                        <h3>Inputs and outputs</h3>
+                        <div class="label">Inputs</div>
+                        <p>Scaled numeric behavioral features; careful treatment of outliers and correlated fields.</p>
+                        <div class="label">Output</div>
+                        <p>Example: customer RS-1042 is assigned to cluster 2 ('engaged running enthusiasts'), a
+                            human-created descriptive label.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="panel">
+                        <h3>One continuous example: RunSmart</h3>
+                        <p>RunSmart: features include orders/year, average basket, discount share, running-category
+                            share and visit frequency. One hypothetical cluster contains frequent runners; another
+                            contains price-sensitive occasional buyers.</p>
+                        <div class="case">
+                            <div class="label">Real-world / research example</div>
+                            <p>Academic example from the uploaded MBA presentation: Anitha &amp; Neelakandan (2024)
+                                propose using fitting-room preference data and K-means for fashion customer profiling.
+                                This is a proposed research approach, not a verified commercial deployment.</p>
+                        </div>
+                    </div>
+                    <div class="twocol">
+                        <div class="panel good">
+                            <h3>✓ Advantages</h3>
+                            <ul>
+                                <li>Does not require purchase labels</li>
+                                <li>Simple and fast for exploratory segmentation</li>
+                                <li>Can guide distinct marketing strategies and persona research</li>
+                            </ul>
+                        </div>
+                        <div class="panel bad">
+                            <h3>! Limitations</h3>
+                            <ul>
+                                <li>K must be chosen and clusters may not be naturally separated</li>
+                                <li>Sensitive to scale, outliers and centroid initialization</li>
+                                <li>Clusters do not themselves predict future purchases or establish causality</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <h3>How to evaluate it</h3>
+                        <p>Evaluate on time-separated test data using precision, recall, ROC-AUC, log loss and
+                            calibration; compare with a simple baseline.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="model-dashboard" data-model="kmeans">
+                <h3>Customer segment explorer</h3>
+                <p class="dashboard-help">Move a customer between synthetic behavioral clusters using two features.</p>
+                <div class="dashboard-layout">
+                    <div class="dashboard-controls"><label>Orders in last 90 days <output
+                                data-output="frequency">5</output><input aria-label="Orders in last 90 days"
+                                data-input="frequency" max="12" min="0" step="1" type="range"
+                                value="5" /></label><label>Average order value (€) <output
+                                data-output="spend">90</output><input aria-label="Average order value (€)"
+                                data-input="spend" max="250" min="0" step="1" type="range" value="90" /></label></div>
+                    <div class="dashboard-results">
+                        <div aria-live="polite" class="dashboard-value"></div>
+                        <div class="dashboard-bars"></div>
+                        <p class="dashboard-explain"></p>
+                    </div>
+                </div>
+                <p class="dashboard-note">Synthetic educational demonstration — not a trained model or verified customer
+                    prediction.</p>
+            </div>
+            <div class="footlinks"></div>
+        </section>
+        <section class="model" id="collaborative">
+            <div class="model-head">
+                <div class="num">04</div>
+                <div>
+                    <div class="eyebrow">Recommendation systems</div>
+                    <h2>Collaborative Filtering</h2>
+                </div>
+            </div>
+            <p class="question">Business question: <strong>Which shoes or accessories should we recommend next?</strong>
+            </p>
+            <div class="cols">
+                <div>
+                    <div class="panel">
+                        <h3>Where this model fits best</h3>
+                        <p>Use when many customers interact with many products, creating a useful user–item interaction
+                            matrix from purchases, ratings, clicks or viewing history.</p>
+                        <h3>How it works</h3>
+                        <p>Find similar users or items based on historical interactions; rank products that similar
+                            shoppers liked. Item-to-item methods identify products that co-occur in user activity.
+                            Modern systems may combine these signals with content and contextual features.</p><svg
+                            aria-label="User item interactions and recommendation" class="diagram" role="img"
+                            viewbox="0 0 520 210"><text x="28" y="28">Users × products</text>
+                            <rect fill="#28425d" height="25" rx="5" width="38" x="140" y="40"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="194" y="40"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="248" y="40"></rect>
+                            <rect fill="#28425d" height="25" rx="5" width="38" x="302" y="40"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="356" y="40"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="140" y="75"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="194" y="75"></rect>
+                            <rect fill="#28425d" height="25" rx="5" width="38" x="248" y="75"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="302" y="75"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="356" y="75"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="140" y="110"></rect>
+                            <rect fill="#28425d" height="25" rx="5" width="38" x="194" y="110"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="248" y="110"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="302" y="110"></rect>
+                            <rect fill="#28425d" height="25" rx="5" width="38" x="356" y="110"></rect>
+                            <rect fill="#28425d" height="25" rx="5" width="38" x="140" y="145"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="194" y="145"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="248" y="145"></rect>
+                            <rect fill="#28425d" height="25" rx="5" width="38" x="302" y="145"></rect>
+                            <rect fill="#4ee4d5" height="25" rx="5" width="38" x="356" y="145"></rect><text x="26"
+                                y="60">U1</text><text x="26" y="95">U2</text><text x="26" y="130">U3</text><text x="26"
+                                y="165">U4</text><text x="140" y="200">Shoes · Socks · Insoles · Belt · Shirt</text>
+                        </svg>
+                    </div>
+                    <div class="panel">
+                        <h3>Inputs and outputs</h3>
+                        <div class="label">Inputs</div>
+                        <p>User–item purchases, ratings, views, interaction timestamps and optional item metadata.</p>
+                        <div class="label">Output</div>
+                        <p>Example: rank socks B, insoles C and hydration belt D for a customer interested in shoe A.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="panel">
+                        <h3>One continuous example: RunSmart</h3>
+                        <p>RunSmart: customers who bought running shoe A also frequently bought sports socks B. The site
+                            recommends B to someone viewing A, subject to stock and relevance checks.</p>
+                        <div class="case">
+                            <div class="label">Real-world / research example</div>
+                            <p>Documented company example: Amazon's item-to-item collaborative filtering was described
+                                by Linden, Smith &amp; York (2003). Netflix also documents personalized recommendations,
+                                although its modern production system is not reducible to one algorithm.</p>
+                        </div>
+                    </div>
+                    <div class="twocol">
+                        <div class="panel good">
+                            <h3>✓ Advantages</h3>
+                            <ul>
+                                <li>Can discover product affinities without manually specifying every rule</li>
+                                <li>Useful for cross-sell, discovery and catalog exploration</li>
+                                <li>Item-based methods can scale well with careful engineering</li>
+                            </ul>
+                        </div>
+                        <div class="panel bad">
+                            <h3>! Limitations</h3>
+                            <ul>
+                                <li>Cold-start problem for new users and new products</li>
+                                <li>Popularity bias and feedback loops can narrow discovery</li>
+                                <li>Sparse interactions can produce weak recommendations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <h3>How to evaluate it</h3>
+                        <p>Evaluate on time-separated test data using precision, recall, ROC-AUC, log loss and
+                            calibration; compare with a simple baseline.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="model-dashboard" data-model="collaborative">
+                <h3>Recommendation ranking simulator</h3>
+                <p class="dashboard-help">Choose a shopper profile and change the influence of similar shoppers.</p>
+                <div class="dashboard-layout">
+                    <div class="dashboard-controls"><label>Shopper profile <output
+                                data-output="profile">0</output><input aria-label="Shopper profile" data-input="profile"
+                                max="2" min="0" step="1" type="range" value="0" /></label><label>Similar-shopper
+                            influence (%) <output data-output="neighbors">65</output><input
+                                aria-label="Similar-shopper influence (%)" data-input="neighbors" max="100" min="0"
+                                step="1" type="range" value="65" /></label></div>
+                    <div class="dashboard-results">
+                        <div aria-live="polite" class="dashboard-value"></div>
+                        <div class="dashboard-bars"></div>
+                        <p class="dashboard-explain"></p>
+                    </div>
+                </div>
+                <p class="dashboard-note">Synthetic educational demonstration — not a trained model or verified customer
+                    prediction.</p>
+            </div>
+            <div class="footlinks"></div>
+        </section>
+        <section class="model" id="timeseries">
+            <div class="model-head">
+                <div class="num">05</div>
+                <div>
+                    <div class="eyebrow">Demand forecasting</div>
+                    <h2>Time-Series Forecasting</h2>
+                </div>
+            </div>
+            <p class="question">Business question: <strong>How many pairs of running shoes should we stock next
+                    month?</strong></p>
+            <div class="cols">
+                <div>
+                    <div class="panel">
+                        <h3>Where this model fits best</h3>
+                        <p>Use when the outcome is a quantity evolving over time: daily sales, weekly orders, seasonal
+                            demand, returns or call volumes.</p>
+                        <h3>How it works</h3>
+                        <p>Model historical demand with trend, seasonality, holidays, promotions and lagged sales.
+                            Compare a seasonal-naive baseline with models such as exponential smoothing, ARIMA or
+                            machine-learning forecasting; quantify forecast uncertainty.</p><svg
+                            aria-label="Historical sales and forecast with uncertainty" class="diagram" role="img"
+                            viewbox="0 0 520 210">
+                            <path d="M30 20V178H495" fill="none" stroke="#54708a" stroke-width="2"></path>
+                            <path d="M45 140L90 130L135 150L180 104L225 115L270 73L315 93L355 66" fill="none"
+                                stroke="#4ee4d5" stroke-width="3"></path>
+                            <path d="M355 66L395 53L435 64L475 39" fill="none" stroke="#ffbb7e" stroke-dasharray="7 5"
+                                stroke-width="3"></path>
+                            <path d="M355 66L395 24L435 29L475 13L475 75L435 100L395 88Z" fill="#ffbb7e" opacity=".13">
+                            </path><text x="45" y="195">Historical demand</text><text x="370" y="195">Forecast →</text>
+                        </svg>
+                    </div>
+                    <div class="panel">
+                        <h3>Inputs and outputs</h3>
+                        <div class="label">Inputs</div>
+                        <p>Weekly demand, price changes, promotion calendar, holidays, stockouts and lead times.</p>
+                        <div class="label">Output</div>
+                        <p>Illustrative: forecast 850 pairs versus actual demand 880; the 30-pair gap can create a
+                            stockout if no replenishment is available.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="panel">
+                        <h3>One continuous example: RunSmart</h3>
+                        <p>RunSmart: the store has weekly sales by shoe size and category. It forecasts demand for the
+                            next four weeks, checks lead times and decides replenishment quantities.</p>
+                        <div class="case">
+                            <div class="label">Real-world / research example</div>
+                            <p>Industry example: retailers commonly use demand forecasting for inventory planning. The
+                                uploaded presentation provides a hypothetical footwear scenario (1,000 traditional
+                                order, 850 AI-assisted forecast, 880 actual demand), not a verified named-company
+                                deployment of a specific forecasting algorithm.</p>
+                        </div>
+                    </div>
+                    <div class="twocol">
+                        <div class="panel good">
+                            <h3>✓ Advantages</h3>
+                            <ul>
+                                <li>Directly supports inventory, staffing and procurement planning</li>
+                                <li>Makes trend and seasonality explicit</li>
+                                <li>Forecast intervals help manage uncertainty and safety stock</li>
+                            </ul>
+                        </div>
+                        <div class="panel bad">
+                            <h3>! Limitations</h3>
+                            <ul>
+                                <li>Demand shocks and promotions can break historical patterns</li>
+                                <li>Stockouts hide true demand unless accounted for</li>
+                                <li>Aggregate forecasts may miss size-level or store-level variation</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <h3>How to evaluate it</h3>
+                        <p>Evaluate on time-separated test data using precision, recall, ROC-AUC, log loss and
+                            calibration; compare with a simple baseline.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="model-dashboard" data-model="timeseries">
+                <h3>Weekly demand forecast</h3>
+                <p class="dashboard-help">Adjust baseline demand, growth and seasonal influence to forecast eight weeks.
+                </p>
+                <div class="dashboard-layout">
+                    <div class="dashboard-controls"><label>Baseline weekly demand <output
+                                data-output="baseline">180</output><input aria-label="Baseline weekly demand"
+                                data-input="baseline" max="500" min="50" step="1" type="range"
+                                value="180" /></label><label>Weekly growth (%) <output
+                                data-output="growth">2</output><input aria-label="Weekly growth (%)" data-input="growth"
+                                max="10" min="-5" step="1" type="range" value="2" /></label><label>Seasonality strength
+                            (%) <output data-output="season">15</output><input aria-label="Seasonality strength (%)"
+                                data-input="season" max="40" min="0" step="1" type="range" value="15" /></label></div>
+                    <div class="dashboard-results">
+                        <div aria-live="polite" class="dashboard-value"></div>
+                        <div class="dashboard-bars"></div>
+                        <p class="dashboard-explain"></p>
+                    </div>
+                </div>
+                <p class="dashboard-note">Synthetic educational demonstration — not a trained model or verified customer
+                    prediction.</p>
+            </div>
+            <div class="footlinks"><a href="#logistic">Compare again ↻</a></div>
+        </section>
+        <section class="summary">
+            <h2>Quick model-selection guide</h2>
+            <div class="tablewrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Question</th>
+                            <th>Model to start with</th>
+                            <th>What it produces</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Who will buy?</td>
+                            <td>Logistic regression</td>
+                            <td>Purchase propensity</td>
+                        </tr>
+                        <tr>
+                            <td>Do signals interact nonlinearly?</td>
+                            <td>Decision trees / XGBoost</td>
+                            <td>Predicted outcome and model diagnostics</td>
+                        </tr>
+                        <tr>
+                            <td>Which shoppers are similar?</td>
+                            <td>K-means</td>
+                            <td>Behavioral segments</td>
+                        </tr>
+                        <tr>
+                            <td>What item should we recommend?</td>
+                            <td>Collaborative filtering</td>
+                            <td>Ranked products</td>
+                        </tr>
+                        <tr>
+                            <td>How many units next month?</td>
+                            <td>Time-series forecasting</td>
+                            <td>Future demand and uncertainty</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+       
+    </main>
+    <script src="model-dashboards.js"></script>
+</body>
+
+</html>
