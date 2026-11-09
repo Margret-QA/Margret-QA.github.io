@@ -1,25 +1,11 @@
-# Margret QA — Corporate Portfolio Website
+# Margret QA portfolio — updated November 2026
 
-A responsive, multi-page portfolio for GitHub Pages. Includes Home, Experience, Skills, Projects, Education, and Contact. The phone number is not published.
+Static GitHub Pages portfolio. This revision updates professional positioning, six expandable skill cards, Requirements Engineering responsibilities, and a flagship banking QA demonstration project overview.
 
-## Local preview
+## Deploy
+1. Extract this ZIP and upload **the files inside** to the root of your existing `Margret-QA.github.io` repository, preserving `assets/`.
+2. Commit to `main`; under Settings > Pages use Deploy from branch, `main`, `/ (root)`.
+3. Preview locally by opening `index.html` or with VS Code Live Server.
+4. The banking QA source code is in the **separate project ZIP**. Create a separate GitHub repository for it, then replace the project overview note with your repository URL.
 
-Open `index.html` in this folder in a browser, or use the Live Server extension in VS Code.
-
-## Published sites
-
-- Portfolio: <https://margret-qa.github.io/profile/>
-- PredictIQ: <https://margret-qa.github.io/predictiq/>
-
-The repository root page links to both sites. GitHub Pages should remain configured to deploy the `main` branch from `/ (root)`.
-
-## Customize
-
-- Edit colors, typography and spacing in `style.css`.
-- Edit page content in individual `.html` files.
-- Edit mobile menu in `script.js`.
-- Projects are explicitly labelled as planned where applicable; replace with evidence and links only after completion.
-- Review the public email and LinkedIn details before publishing.
-- Google Fonts is used with local system font fallbacks.
-
-No build tools, API keys, or hosting fees are required.
+No real banking/customer data or proprietary materials are used. Project examples and developing skills are clearly labeled. Verify all professional claims before publishing.
